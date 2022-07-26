@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.status {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    background-color: palegoldenrod;
+    color: darkblue;
+    padding: 1rem;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+}
+
+.btn-submit {
+    padding: 0.3rem 0.8rem;
+    font-size: 22px;
+    width: 100%;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1rem;
+}
+
+.images > img {
+    width: 100%;
+    object-fit: cover;
+}
