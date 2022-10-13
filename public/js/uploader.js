@@ -31,7 +31,9 @@ const app = Vue.createApp({
                     if (data.message) {
                         this.message = data.message;
                     }
-                    this.images.push(data.path);
+                    if (data.path) {
+                        this.images.push(data.path);
+                    }
                 })
         }
     }
