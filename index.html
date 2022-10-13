@@ -8,8 +8,19 @@
         <title>Upload Your Files</title>
     </head>
     <body>
-        <main id="main">
+        <main>
             <h1>Upload Your Files</h1>
+            <div class="status">{{ message }}</div>
+            <form @submit.prevent="upload" action="/image" method="post" enctype="multipart/form-data">
+                <div class="form-row">
+                    <label for="file">Your File:</label>
+                    <input type="file" name="file" id="file">
+                </div>
+                <input type="submit" value="Upload!" class="btn-submit">
+            </form>
+            <div class="images">
+                <img v-for="image in images" v-bind:src="image" alt="uploaded image">
+            </div>
         </main>
         <script src="https://unpkg.com/vue@3"></script>
         <script src="/js/uploader.js"></script>
